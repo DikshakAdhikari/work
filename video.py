@@ -1,11 +1,10 @@
-from pytube import YouTube # type: ignore
+from pytube import YouTube 
 
 def download_video(url, save_path):
     try:
       
         yt = YouTube(url)
         
-
         stream = yt.streams.get_highest_resolution()
      
         stream.download(output_path=save_path)

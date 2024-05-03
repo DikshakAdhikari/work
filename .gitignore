@@ -1,0 +1,8 @@
+*.pyc
+
+venv/
+env/
+audio/
+downloads/
+sound/
+subtitles/
