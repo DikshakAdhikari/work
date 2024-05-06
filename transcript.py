@@ -8,7 +8,7 @@ load_dotenv()
 
 extractAudio(url="https://www.youtube.com/watch?v=iiaH2q-RlDs", location="./subtitles")
 
-
+AUDIO_URL = 'https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav'
 DEEPGRAM_API_KEY = os.getenv("API_KEY")
 
 
@@ -30,7 +30,7 @@ def deepGram_api_call(audio_url):
 
 
 def main():
-    AUDIO_URL = 'https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav'
+    
     transcripted_result= deepGram_api_call(audio_url= AUDIO_URL)
     print(transcripted_result.json())
 
