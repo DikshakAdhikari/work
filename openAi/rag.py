@@ -24,6 +24,7 @@ embedding_result= client.embeddings.create(
 final_embedding= embedding_result.data[0].embedding
 print(final_embedding)
 
+
 index = pc.Index("test")
 
 index.upsert(
