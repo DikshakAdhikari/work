@@ -6,7 +6,6 @@ health_wellness_faqs = [
     ("How can I reduce stress?", "Practicing mindfulness, exercising regularly, getting enough sleep, and seeking support from friends, family, or a therapist can help reduce stress."),
     ("What are the benefits of regular exercise?", "Regular exercise can improve cardiovascular health, boost mood, increase energy levels, promote better sleep, and reduce the risk of chronic diseases."),
 
-
     # Nutrition
     ("What are macronutrients and micronutrients?", "Macronutrients, such as carbohydrates, proteins, and fats, are nutrients that provide energy, while micronutrients, such as vitamins and minerals, are essential for various bodily functions."),
     ("How can I improve my eating habits?", "Focus on eating whole, unprocessed foods, listen to your body's hunger and fullness cues, and practice mindful eating."),
