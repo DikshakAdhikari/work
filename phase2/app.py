@@ -18,5 +18,18 @@ def get_books():
 def get_by_id(bookId):
     return jsonify(bookId)
 
+@app.route('/', methods=["POST"])
+def post_book():
+    new_book=  {"id":request.json["id"],"book":request.json["book"], "author":request.json["author"]}
+    books.append(new_book)
+    return jsonify(books)
+
+@app.route('/<int:book_id>', methods=['PUT'])
+def update_book(book_id):
+    for book_single in books:
+        if(book_single['id'] == book_id):
+            return jsonify({'message':'User updated successfully!'})
+    return jsonify('Error: Book not found')
+
 if __name__ == '__main__':
     app.run(debug=True)
