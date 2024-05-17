@@ -28,8 +28,18 @@ def post_book():
 def update_book(book_id):
     for book_single in books:
         if(book_single['id'] == book_id):
+            book_single['id']= request.json['id']
+            book_single['author']= request.json['author']
             return jsonify({'message':'User updated successfully!'})
     return jsonify('Error: Book not found')
+
+@app.route('/<int:book_id>', methods=['DELETE'])
+def remove_book(book_id):
+    for bookk in books:
+        if(bookk["id"]==book_id):
+            books.remove(bookk)
+            return jsonify({'message': 'book removed successfully!'})
+    return jsonify({'error': 'Book not found'})
 
 if __name__ == '__main__':
     app.run(debug=True)
